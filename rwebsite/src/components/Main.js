@@ -7,7 +7,7 @@ import Video from "../assets/vid.mp4";
 export default function Main() {
   return (
     <div className="hero-container">
-      <video src={Video} autoPlay loop muted/>
+      <video src={Video} autoPlay loop muted/>        {/** a comment... */}
       <h1>Welcome</h1>
       <p>ADMIN</p>
       <div className="hero-btns">
