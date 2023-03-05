@@ -11,13 +11,8 @@ export default function Main() {
       <h1>Welcome</h1>
       <p>ADMIN</p>
       <div className="hero-btns">
-        <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
-          ENTER
-        </Button>
-        <Button className = "btns" buttonStyle = "btn--primary"
-         buttonSize = "btn--large"
-        children = "Exit"
-        />
+        <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">ENTER</Button>
+        <Button className = "btns" buttonStyle = "btn--primary" buttonSize = "btn--large" children = "Exit"></Button>
       </div>
     </div>
   );

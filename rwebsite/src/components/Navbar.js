@@ -1,6 +1,8 @@
 import "./styles/Navbar.css";
+import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Resume from '../assets/resume.pdf'
 
 import Button from "./Button";
 
@@ -25,6 +27,8 @@ export default function Navbar() {
     }
   }
 
+
+
   useEffect( () => {
     showButton()
   },[])
@@ -35,22 +39,22 @@ export default function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>Usman Zia</Link>
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>USMAN ZIA</Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}/>
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link>
+              <a href={Resume} className="nav-links" download="Usman Zia.pdf">MyResume</a>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>GitHub</Link>
+              <a target="blank" className="nav-links" href="https://github.com/usman-z">MyGithub</a>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>LinkedIn</Link>
+              <a target="blank" className="nav-links" href="https://www.linkedin.com/in/u-zia">MyLinkedIn</a>
             </li>
           </ul>
-        {button && <Button buttonStyle = "btn--outline">PORTFOLIO</Button>}
+        {button && <Button buttonStyle = "btn--outline">LOG IN</Button>}
         </div>
       </nav>
     </>
