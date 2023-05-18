@@ -1,6 +1,5 @@
 :root {
-     --blue-1: #3C429E;
-     --blue-2: #4C52AD;
+     --blue-2: #1f5ba4;
      --yellow-1: #FAC742;
      --white: #FFF;
      --grey-1: #EDEDED;
@@ -19,7 +18,7 @@ body {
      font-size: 16px;
      width: 100%;
      height: 100vh;
-     background-color: var(--blue-1);
+     background-image: linear-gradient(rgb(64, 200, 242), yellow);
 
      display: flex;
      justify-content: center;
@@ -61,6 +60,7 @@ body {
      left: 0;
      width: 100%;
      height: 100%;
+     object-fit: cover;
 }
 
 .weather-data {
@@ -97,7 +97,8 @@ body {
      background-color: var(--shadow-light);
      border-bottom-left-radius: 20px;
      border-bottom-right-radius: 20px;
-     margin-top: 1em;
+     margin-top: 0.5em;
+     height: 70%;
 
      display: flex;
      flex-direction: row;
@@ -108,7 +109,7 @@ body {
      width: 50%;
      display: flex;
      flex-direction: row;
-     margin-top: 2em;
+     margin-top: 1em;
 }
 
 .info-block-label {
@@ -120,7 +121,7 @@ body {
 }
 
 .info-block-label img {
-     width: 2em;
+     width: 1.5em;
 }
 
 .info-block-label span {
