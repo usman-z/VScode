@@ -1,11 +1,17 @@
-<div class="container">
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Search City" name="city" [(ngModel)]="cityName">
+  </form>
+</div>
+
+<div class="container" *ngIf="weatherData">
   <div class="upper-data">
-    <img src="../assets/hotW.webp" *ngIf="14 > 15"/>
-    <img src="../assets/coolW.jpg" *ngIf="14 <= 15"/>
+    <img src="../assets/night.jpg" *ngIf="weatherData.current.is_day == 0"/>
+    <img src="../assets/day.jpg" *ngIf="weatherData.current.is_day != 0"/>
 
     <div class="weather-data">
-      <div class="location">High Point, NC</div>
-      <div class="temperature">{{ 14.40 | number: "1.0-0"}}°C</div>
+      <div class="location">{{ weatherData.location.name }}</div>
+      <div class="temperature">{{ weatherData.current.temp_f | number: "1.0-0"}}°F</div>
     </div>
   </div>
   <div class="lower-data">
@@ -14,20 +20,20 @@
       <div class="more-info-container">
         <div class="info-block">
           <div class="info-block-label">
-            <img src="../assets/lowT.png"/>
-            <span>min</span>
+            <img src="../assets/celsius.png"/>
+            <span>celsius</span>
           </div>
           <div class="info-block-value">
-            10°C
+            {{ weatherData.current.temp_c | number: "1.0-0"}}°C
           </div>
         </div>
         <div class="info-block">
           <div class="info-block-label">
-            <img src="../assets/highT.png"/>
-            <span>max</span>
+            <img src="../assets/temp.png"/>
+            <span>feels like</span>
           </div>
           <div class="info-block-value">
-            20°C
+            {{ weatherData.current.feelslike_f | number: "1.0-0"}}°F
           </div>
         </div>
         <div class="info-block" style="margin-top: 1.5em; margin-bottom: 3em;">
@@ -36,7 +42,7 @@
             <span>humidity</span>
           </div>
           <div class="info-block-value">
-            77%
+            {{ weatherData.current.humidity }}%
           </div>
         </div>
         <div class="info-block" style="margin-top: 1.5em; margin-bottom: 3em;">
@@ -45,7 +51,7 @@
             <span>wind</span>
           </div>
           <div class="info-block-value">
-            11 km/h
+            {{ weatherData.current.wind_mph }} mph
           </div>
         </div>                      
       </div>
