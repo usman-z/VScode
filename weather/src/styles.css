@@ -98,7 +98,7 @@ body {
      border-bottom-left-radius: 20px;
      border-bottom-right-radius: 20px;
      margin-top: 0.5em;
-     height: 70%;
+     height: 80%;
 
      display: flex;
      flex-direction: row;
@@ -121,12 +121,12 @@ body {
 }
 
 .info-block-label img {
-     width: 1.5em;
+     width: 2.3em;
 }
 
 .info-block-label span {
      color: var(--white);
-     font-size: 0.8em;
+     font-size: 1em;
 }
 
 .info-block-value {
@@ -135,6 +135,7 @@ body {
      justify-content: flex-start;
      align-items: center;
      color: var(--white);
+     margin-left: 0.5em;
 }
 
 .search {

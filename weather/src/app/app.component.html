@@ -11,7 +11,7 @@
 
     <div class="weather-data">
       <div class="location">{{ weatherData.location.name }}</div>
-      <div class="temperature">{{ weatherData.current.temp_f | number: "1.0-0"}}°F</div>
+      <div class="temperature">{{ weatherData.location.localtime.split(" ")[1] }}</div>
     </div>
   </div>
   <div class="lower-data">
@@ -30,10 +30,10 @@
         <div class="info-block">
           <div class="info-block-label">
             <img src="../assets/temp.png"/>
-            <span>feels like</span>
+            <span>fahrenheit </span>
           </div>
           <div class="info-block-value">
-            {{ weatherData.current.feelslike_f | number: "1.0-0"}}°F
+            {{ weatherData.current.temp_f | number: "1.0-0"}}°F
           </div>
         </div>
         <div class="info-block" style="margin-top: 1.5em; margin-bottom: 3em;">
@@ -51,7 +51,7 @@
             <span>wind</span>
           </div>
           <div class="info-block-value">
-            {{ weatherData.current.wind_mph }} mph
+            {{ weatherData.current.wind_mph  | number: "1.0-0"}} mph
           </div>
         </div>                      
       </div>
