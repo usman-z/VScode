@@ -126,7 +126,7 @@ body {
 
 .info-block-label span {
      color: var(--white);
-     font-size: 1em;
+     font-size: 0.9em;
 }
 
 .info-block-value {
